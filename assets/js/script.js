@@ -3,13 +3,13 @@ let computerChoiceDisplay = document.getElementById("computer-choice");
 let playerChoiceDisplay = document.getElementById("player-choice");
 let playerScoreDisplay = document.getElementById("player-score");
 let computerScoreDisplay = document.getElementById("computer-score");
-const rockRef = document.querySelector("#rock");
-const scissorsRef = document.querySelector("#scissors");
-const paperRef = document.querySelector("#paper");
+let rockRef = document.querySelector("#rock");
+let scissorsRef = document.querySelector("#scissors");
+let paperRef = document.querySelector("#paper");
 let computerImage = document.getElementById('computer-image');
 let resultDisplay = document.getElementById("result")
 let buttonChoices = document.querySelectorAll("button");
-
+let computerOptions;
 let playerChoice;
 let computerChoice;
 let computerScore = 0;
@@ -37,6 +37,7 @@ scissorsRef.addEventListener('click', () => {
 paperRef.addEventListener('click', () => {
     displayUserChoice("paper");
 });
+
 
 //Displays the image as the button is pressed
 
