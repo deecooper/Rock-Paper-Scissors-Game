@@ -144,7 +144,7 @@ function getScore() {
 
     } else if (playerScore < 10 && computerScore === 10) {
         gameCompleted = true;
-        alert("You lost")
+        alert("You lost");
         window.location.replace("game-finished.html");
 
 
