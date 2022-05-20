@@ -81,3 +81,68 @@ function computerSelection() {
 
 }
 
+function getResult() {
+    if (playerChoice === "rock") {
+        if (computerChoice === "rock") {
+            result = "Its a draw";
+        } else if (computerChoice === "scissors") {
+            result = "You Won";
+            playerScore++;
+        } else if (computerChoice === "paper") {
+            result = "You lose";
+            computerScore++;
+
+        }
+
+    }
+
+    if (playerChoice === "paper") {
+        if (computerChoice === "paper") {
+            result = "Its a draw";
+        } else if (computerChoice === "rock") {
+            result = "You Won";
+            playerScore++;
+        } else if (computerChoice === "scissors") {
+            result = "You lose";
+            computerScore++;
+
+        }
+    }
+
+    if (playerChoice === "scissors") {
+        if (computerChoice === "scissors") {
+            result = "Its a draw";
+        } else if (computerChoice === "paper") {
+            result = "You Won";
+            playerScore++;
+        } else if (computerChoice === "rock") {
+            result = "You lose";
+            computerScore++;
+
+        }
+
+    }
+
+    resultDisplay.innerHTML = result;
+    playerScoreDisplay.innerHTML = playerScore;
+    computerScoreDisplay.innerHTML = computerScore;
+
+}
+
+
+function getScore() {
+    if (playerScore === 10 && computerScore < 10) {
+        gameCompleted = true;
+        result = "You Won the game";
+
+        window.location.replace("game-finished.html");
+   
+    } else if (playerScore < 10 && computerScore === 10){
+        gameCompleted = true;
+        result = "You Lost the game";
+        window.location.replace("game-finished.html");
+           
+
+    }
+
+}
