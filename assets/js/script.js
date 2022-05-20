@@ -133,23 +133,24 @@ function getResult() {
 
 
 function getScore() {
+    
     if (playerScore === 10 && computerScore < 10) {
         gameCompleted = true;
-        result = "You Won the game";
+        gameResult = "You Won the game";
+        alert = "You Won the game";
         window.location.replace("game-finished.html");
-        gameResult ="You Won!"
-        gameResultDisplay.innerHTML = gameResult;
+        
    
     } else if (playerScore < 10 && computerScore === 10){
         gameCompleted = true;
-        result = "You Lost the game";
+        gameResult = "You Lost the game";
+        alert = "You Lost the game";
         
         window.location.replace("game-finished.html");
-        gameResult ="You Lost"
+        
            
 
     }
     gameResultDisplay.innerHTML = gameResult;
-
 
 }
