@@ -1,14 +1,4 @@
-html { 
-    background: url(../images/background.png) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-
-  /* Headings */
-
-  h1, h2, h3 {
+h1, h2, h3 {
     color: #ee3538;
     font-family: 'Luckiest Guy', cursive;
     -webkit-text-stroke: black 1px;
@@ -22,13 +12,20 @@ h1 {
 
 }
 
+h2 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
 p {
     font-size: 30px;
     font-family: 'Luckiest Guy', cursive;
     color: black;
 
 }
-
 #result {
     margin:auto;
 }
@@ -39,7 +36,39 @@ p {
     margin-top: 40px;
 }
 
-/* Containers for game */
+.play-button {
+    color: white;
+    background-color: #ee3538;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 30px;
+    border-radius: 5px;
+    width: 150px;
+    height: 50px;
+    display: inline-block;
+    
+
+}
+
+.play-button:hover {
+    background-color: #f89c44;
+
+}
+
+
+.play-button a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+html { 
+    background: url(../images/background.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 
 .game-container {
     width: 80%;
@@ -63,15 +92,6 @@ p {
     float: right;
 }
 
-.center-container {
-    margin: auto;
-    width: 500px;
-    padding-bottom: 50px;
-}
-
-
-/* Button Styles */
-
 .btn1 {
     color: white;
     background-color: #ee3538;
@@ -86,34 +106,31 @@ p {
     
 }
 
+#button-area {
+    
+    width: 100%;
+
+
+}
+
 .btn1:hover {
     background-color: #f89c44;
 }
 
-.play-button {
-    color: white;
-    background-color: #ee3538;
-    font-family: 'Luckiest Guy', cursive;
-    font-size: 30px;
-    border-radius: 5px;
-    width: 150px;
-    height: 50px;
-    display: inline-block;
-    cursor: pointer;
-
+.image-area {
+    width: 60%;
+    margin-left: 70px;
     
 
 }
 
-.play-button:hover {
-    background-color: #f89c44;
-
+.image-area img {
+    margin: auto;
+    height: 200px;
 }
 
-
-.play-button a {
-    text-decoration: none;
-    color: white;
+#score {
+    display: inline-flex;
 }
 
 #game-over-title {
@@ -137,7 +154,11 @@ p {
     letter-spacing: 1px;
 }
 
-
+.center-container {
+    margin: auto;
+    width: 500px;
+    padding-bottom: 50px;
+}
 
 .player {
     transform: rotatey(180deg);
