@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--Link to Google fonts-->
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Acme&family=Fredoka+One&family=Luckiest+Guy&display=swap" rel="stylesheet">
     <title>Rock Paper Scissors</title>
@@ -15,31 +16,14 @@
 <body>
     
     <div class="game-container">
-    <h1>Rock Paper Scissors</h1>
-    <p id="result">Result:  </p>
-    <div id="inner-container-left">
-        <!--player choice-->
-    <h2>You:  <span id="player-choice"></span> </h2>
-    <div class="image-area"><img src="assests/images/rock.png" id="player-image" class="player"></div>
-    <div id="button-area">
-    
-    <button class="btn1" id="rock" aria-label="rock">rock</button>
-    <button class="btn1" id="paper" aria-label="paper">paper</button>
-    <button class="btn1" id="scissors" aria-label="scissors">scissors</button>
-</div>
-</div>
-
-
-<div id="inner-container-right">
-<!--Computer choice-->
-<h2>Computer:   <span id ="computer-choice"></span></h2>
-<div class="image-area"><img src="assests/images/rock.png" id="computer-image"></div>
-
-<div id="score">
-    <p>Player : <span id="player-score"> 0 </span> </p>
-    <p> Computer : <span id="computer-score"> 0 </span> </p>
-</div>
+    <h1 id="main-title">Rock Paper<br>Scissors</h1>
+    <div class="center-container">
+    <p id="instructions">Game Instructions<br> Select Rock, Paper or Scissors.
+    See if you can beat the computer. The first one who gets a score of 10 wins!
+    Rock crushes Scissors, Paper covers Rock, Scissors cuts paper <br>Good luck!</p>
     </div>
+    <button class="play-button" aria-label="play"><a href="play.html">play</a></button>
+    
 
     <script src="assets/js/script.js"></script>
 
