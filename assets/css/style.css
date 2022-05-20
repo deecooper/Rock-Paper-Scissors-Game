@@ -228,10 +228,13 @@ html {
             margin-top: 70px;
         }
 
-        .center-container {
+        .center-container{
+
+            width: 300px;
 
         }
 
+        
 
 
 
