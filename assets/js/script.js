@@ -7,11 +7,9 @@ const rockRef = document.querySelector("#rock");
 const scissorsRef = document.querySelector("#scissors");
 const paperRef = document.querySelector("#paper");
 let computerImage = document.getElementById('computer-image');
-let gameResultDisplay = document.getElementById("game-result")
-
 let resultDisplay = document.getElementById("result")
 let buttonChoices = document.querySelectorAll("button");
-let scoreDisplay = document.getElementById("score")
+
 let playerChoice;
 let computerChoice;
 let computerScore = 0;
@@ -21,37 +19,38 @@ let gameResult;
 let gameCompleted = false;
 
 
-let controlOptions = {
+const controlOptions = {
     rock: "./assets/images/rock.png",
     paper: "./assets/images/paper.png",
     scissors: "./assets/images/scissors.png",
-   
+
 };
 
 rockRef.addEventListener('click', () => {
-    displayUserChoice("rock");});
+    displayUserChoice("rock");
+});
 
 scissorsRef.addEventListener('click', () => {
-    displayUserChoice("scissors");});
+    displayUserChoice("scissors");
+});
 
 paperRef.addEventListener('click', () => {
-    displayUserChoice("paper");});
+    displayUserChoice("paper");
+});
 
+//Displays the image as the button is pressed
 
-    function displayUserChoice(control) { 
-        document.getElementById("player-image").src = controlOptions[control];
-    
-        let userContest = document.getElementById("player-image");
-          userContest.style.visibility = "visible" ;
-        }
+function displayUserChoice(control) {
+    document.getElementById("player-image").src = controlOptions[control];
 
+    let userContest = document.getElementById("player-image");
+    userContest.style.visibility = "visible";
+}
 
+// Player choice buttons
 buttonChoices.forEach(buttonChoice => buttonChoice.addEventListener("click", (e) => {
     playerChoice = e.target.id;
     playerChoiceDisplay.innerHTML = playerChoice;
-    
-  
-
 
     computerSelection();
     getResult();
@@ -59,6 +58,7 @@ buttonChoices.forEach(buttonChoice => buttonChoice.addEventListener("click", (e)
 
 }));
 
+//Computer Choice
 
 function computerSelection() {
     let randomNumber = Math.floor(Math.random() * 3);
@@ -72,17 +72,18 @@ function computerSelection() {
         computerChoice = "scissors";
 
     }
-    computerOptions = ["rock", "paper", "scissors"]
+    computerOptions = ["rock", "paper", "scissors"];
 
     computerChoiceDisplay.innerHTML = computerChoice;
     let computerChoose = computerOptions[randomNumber];
     console.log(computerChoose)
-    computerImage.src = `./assets/images/${computerChoiceDisplay.innerHTML}.png`; 
-    computerImage.style.visibility = "visible" ;  
+    computerImage.src = `./assets/images/${computerChoiceDisplay.innerHTML}.png`;
+    computerImage.style.visibility = "visible";
 
 
 }
 
+//Updates the result
 function getResult() {
     if (playerChoice === "rock") {
         if (computerChoice === "rock") {
@@ -133,24 +134,21 @@ function getResult() {
 
 
 function getScore() {
-    
+
     if (playerScore === 10 && computerScore < 10) {
         gameCompleted = true;
-        gameResult = "You Won the game";
-        alert = "You Won the game";
+        alert("You won");
         window.location.replace("game-finished.html");
-        
-   
-    } else if (playerScore < 10 && computerScore === 10){
+
+
+
+    } else if (playerScore < 10 && computerScore === 10) {
         gameCompleted = true;
-        gameResult = "You Lost the game";
-        alert = "You Lost the game";
-        
+        alert("You lost")
         window.location.replace("game-finished.html");
-        
-           
+
 
     }
-    gameResultDisplay.innerHTML = gameResult;
+
 
 }
