@@ -45,6 +45,8 @@ p {
     width: 150px;
     height: 50px;
     display: inline-block;
+    cursor: pointer;
+
     
 
 }
@@ -163,3 +165,51 @@ html {
 .player {
     transform: rotatey(180deg);
 }
+
+#game-result {
+    font-size: 30px;
+    font-family: 'Luckiest Guy', cursive;
+    color: black;
+}
+
+@media screen and (max-width: 950px) {
+
+    h1 {
+        font-size: 55px;
+    
+    }
+    
+    h2 {
+        font-size: 35px;
+    }
+    
+    p {
+        font-size: 25px;
+    
+    }
+    
+    .game-container {
+        width: 85%;
+    
+    
+    }
+    
+    }
+
+    @media screen and (max-width: 750px) {
+
+        .game-container {
+            width: 95%;
+        
+        
+        }
+        
+
+
+
+
+
+
+
+
+    }

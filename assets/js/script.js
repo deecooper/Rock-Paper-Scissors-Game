@@ -3,10 +3,11 @@ let computerChoiceDisplay = document.getElementById("computer-choice");
 let playerChoiceDisplay = document.getElementById("player-choice");
 let playerScoreDisplay = document.getElementById("player-score");
 let computerScoreDisplay = document.getElementById("computer-score");
-const rockRef = document.querySelector('#rock');
-const scissorsRef = document.querySelector('#scissors');
-const paperRef = document.querySelector('#paper');
+const rockRef = document.querySelector("#rock");
+const scissorsRef = document.querySelector("#scissors");
+const paperRef = document.querySelector("#paper");
 let computerImage = document.getElementById('computer-image');
+let gameResultDisplay = document.getElementById("game-result")
 
 let resultDisplay = document.getElementById("result")
 let buttonChoices = document.querySelectorAll("button");
@@ -16,10 +17,11 @@ let computerChoice;
 let computerScore = 0;
 let playerScore = 0;
 let result;
+let gameResult;
 let gameCompleted = false;
 
 
-const controlOptions = {
+let controlOptions = {
     rock: "./assets/images/rock.png",
     paper: "./assets/images/paper.png",
     scissors: "./assets/images/scissors.png",
@@ -27,13 +29,13 @@ const controlOptions = {
 };
 
 rockRef.addEventListener('click', () => {
-    displayUserChoice('rock');});
+    displayUserChoice("rock");});
 
 scissorsRef.addEventListener('click', () => {
-    displayUserChoice('scissors');});
+    displayUserChoice("scissors");});
 
 paperRef.addEventListener('click', () => {
-    displayUserChoice('paper');});
+    displayUserChoice("paper");});
 
 
     function displayUserChoice(control) { 
@@ -134,15 +136,20 @@ function getScore() {
     if (playerScore === 10 && computerScore < 10) {
         gameCompleted = true;
         result = "You Won the game";
-
         window.location.replace("game-finished.html");
+        gameResult ="You Won!"
+        gameResultDisplay.innerHTML = gameResult;
    
     } else if (playerScore < 10 && computerScore === 10){
         gameCompleted = true;
         result = "You Lost the game";
+        
         window.location.replace("game-finished.html");
+        gameResult ="You Lost"
            
 
     }
+    gameResultDisplay.innerHTML = gameResult;
+
 
 }
