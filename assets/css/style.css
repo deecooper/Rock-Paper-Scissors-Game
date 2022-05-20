@@ -6,6 +6,7 @@ html {
     background-size: cover;
   }
 
+  /* Headings */
 
   h1, h2, h3 {
     color: #ee3538;
@@ -21,6 +22,25 @@ h1 {
 
 }
 
+p {
+    font-size: 30px;
+    font-family: 'Luckiest Guy', cursive;
+    color: black;
+
+}
+
+#result {
+    margin:auto;
+}
+
+
+#main-title {
+    font-size: 70px;
+    margin-top: 40px;
+}
+
+/* Containers for game */
+
 .game-container {
     width: 80%;
     height: 600px;
@@ -30,4 +50,60 @@ h1 {
     border: solid black 2px;
     text-align: center;
     margin-top: 30px;
+}
+
+#inner-container-left {
+    width: 50%;
+    float: left;
+
+}
+
+#inner-container-right{
+    width: 50%;
+    float: right;
+}
+
+
+/* Button Styles */
+
+.btn1 {
+    color: white;
+    background-color: #ee3538;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 25px;
+    border-radius: 5px;
+    width: 125px;
+    height: 35px;
+    display: inline-block;
+    cursor: pointer;
+    
+    
+}
+
+.btn1:hover {
+    background-color: #f89c44;
+}
+
+.play-button {
+    color: white;
+    background-color: #ee3538;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 30px;
+    border-radius: 5px;
+    width: 150px;
+    height: 50px;
+    display: inline-block;
+    
+
+}
+
+.play-button:hover {
+    background-color: #f89c44;
+
+}
+
+
+.play-button a {
+    text-decoration: none;
+    color: white;
 }
