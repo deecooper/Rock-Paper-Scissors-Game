@@ -77,7 +77,7 @@ function computerSelection() {
 
     computerChoiceDisplay.innerHTML = computerChoice;
     let computerChoose = computerOptions[randomNumber];
-    console.log(computerChoose)
+    console.log(computerChoose);
     computerImage.src = `./assets/images/${computerChoiceDisplay.innerHTML}.png`;
     computerImage.style.visibility = "visible";
 
