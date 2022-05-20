@@ -63,6 +63,12 @@ p {
     float: right;
 }
 
+.center-container {
+    margin: auto;
+    width: 500px;
+    padding-bottom: 50px;
+}
+
 
 /* Button Styles */
 
@@ -108,4 +114,31 @@ p {
 .play-button a {
     text-decoration: none;
     color: white;
+}
+
+#game-over-title {
+    font-size: 100px;
+    margin-top: 90px;
+}
+
+#play-again-btn {
+    width: 200px;
+}
+
+#exit-btn {
+    width: 200px;
+}
+
+#instructions {
+    font-size: 20px;
+    text-align: center;
+    margin: auto;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+
+
+
+.player {
+    transform: rotatey(180deg);
 }
